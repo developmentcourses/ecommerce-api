@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    ports:
+      - '5432:5432'
+  mailcatcher:
+    #image: schickling/mailcatcher
+    restart: on-failure:10
+    image: dockage/mailcatcher:0.7.1
+    ports:
+    - "1080:1080"
+    - "1025:1025"
+  web:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - RAILS_ENV=development
+        - NODE_ENV=development
+    ports:
+      - '3000:3000'
+      - '3009:3009'
+    volumes:
+      - ./:/app
+    depends_on:
+      - db
+    links:
+      - mailcatcher
+volumes:
+  postgres:

@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 class Validator
     include ActiveModel::Validations
@@ -18,7 +18,7 @@ describe FutureDateValidator do
 
       it 'adds an error on model' do
         subject.valid?
-        expect(subject.errors.keys).to include(:date)
+        expect(subject.errors.attribute_names).to include(:date)
       end
     end
 
@@ -31,7 +31,7 @@ describe FutureDateValidator do
 
       it 'adds an error on model' do
         subject.valid?
-        expect(subject.errors.keys).to include(:date)
+        expect(subject.errors.attribute_names).to include(:date)
       end
     end
 

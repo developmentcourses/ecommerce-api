@@ -15,6 +15,9 @@ gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth', branch: 'm
 #Cors
 gem 'rack-cors'
 
+#Rendering
+gem 'jbuilder', '~> 2.10.1'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'
@@ -26,6 +29,8 @@ end
 group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem 'spring-watcher-listen'
+  gem 'spring-commands-rspec'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

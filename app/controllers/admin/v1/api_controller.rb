@@ -6,7 +6,7 @@ module Admin::V1
             errors = {}
             errors['fields'] = fields if fields.present?
             erross['message'] = message if message.present?
-            render json: { errors: errors}, status: status 
+            render json: { errors: errors }, status: status 
         end
         
     end

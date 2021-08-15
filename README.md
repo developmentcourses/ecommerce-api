@@ -1,11 +1,11 @@
-<p align="center">
+<!-- <p align="center">
   <img src="https://github.com/cleitoncorreas/cleitoncorreas/blob/05f3e3270cecc653a1d29952e8e9555533e742de/Projetos/Notebook/Logo/logo.png" width="200" height="200" />
 </p>
-
+ -->
 <br>
 
-# 📚 Notebook (Backend)
-Projeto agenda backend Ruby on Rails API
+# 📚 Ecommerce API (Backend)
+Projeto ecommerce backend Ruby on Rails API
 
 ## 🚀 Começando
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.

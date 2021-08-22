@@ -7,7 +7,6 @@ RSpec.describe "Admin::V1::Categories without authentication", type: :request do
         let!(:categories) { create_list(:category, 5) }
 
         before(:each) { get url }
-
         include_examples "unauthenticated access"
     end
 

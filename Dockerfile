@@ -29,4 +29,5 @@ RUN bundle install && \
 CMD bundle install && \
     npm cache verify && \
     yarn install && \
+    bundle exec rails db:drop db:create db:migrate db:test:prepare && \
     rm -Rf /app/tmp/pids/ && bundle exec rails server -b 0.0.0.0 -p 3000
